@@ -37,7 +37,7 @@ jobs:
         chmod 777 *
         ./gradlew assembleRelease
         rm keystore.jks
-        echo "APkFileName=$(find app/build/outputs/apk/release -name "*.apk")" >> $GITHUB_ENV
+        echo "APkFileName=$(find app/build/outputs/apk/release -name "*.zip")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
  
     - name: Upload Artefact
