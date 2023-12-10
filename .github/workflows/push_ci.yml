@@ -37,6 +37,7 @@ jobs:
         chmod 777 *
         ./gradlew assembleRelease
         rm keystore.jks
+        ls app/build/outputs/apk/release/
         echo "APkFileName=$(find app/build/outputs/apk/release -name "*.zip")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
  
