@@ -1,0 +1,16 @@
+<resources>
+    <style name="AppThemeColor" parent="AppThemeNight">
+        <item name="android:statusBarColor">@color/cardBgDark</item>
+        <item name="android:navigationBarColor">@color/cardBgDark</item>
+        <item name="colorPrimary">?android:colorAccent</item>
+        <item name="colorPrimaryDark">?android:colorAccent</item>
+        <item name="android:actionBarTheme">@style/AppTheme.AppBarOverlay.Dark</item>
+    </style>
+
+    <style name="AppThemeWallpaper" parent="AppThemeNoActionBarNight">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="cardBg">@color/cardBgDarkTransparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

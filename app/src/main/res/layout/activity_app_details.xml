@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="screen"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:keepScreenOn="false"
+    tools:openDrawer="start">
+
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?android:actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/ListCardItem"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/app_details_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/linux" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/app_details_name"
+                        style="@style/textTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/app_details_packagename"
+                        style="@style/textSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/scene_mode_allow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:switchPadding="6dp"
+                android:text="打开应用自动执行操作" />
+
+            <LinearLayout
+                android:id="@+id/scene_mode_config"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/app_details_perf"
+                    style="@style/ListCardItem"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/scene_config_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="性能调节" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="调节性能至" />
+
+                        <TextView
+                            android:id="@+id/app_details_dynamic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="内存(cgroup) 前台时" />
+
+                        <TextView
+                            android:id="@+id/app_details_cgroup_mem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="内存(cgroup) 离开后" />
+
+                        <TextView
+                            android:id="@+id/app_details_cgroup_mem2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自动加速(memory)" />
+
+                        <TextView
+                            android:id="@+id/app_details_boost_mem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_details_auto"
+                    style="@style/ListCardItem"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/scene_config_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="基本设置" />
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关闭自动亮度" />
+                        <Switch
+                            android:id="@+id/app_details_aloowlight"
+                            style="@style/scene_config_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="打开GPS（离开后还原）" />
+                        <Switch
+                            android:id="@+id/app_details_gps"
+                            style="@style/scene_config_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:minHeight="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="旋转屏幕" />
+
+                        <TextView
+                            android:id="@+id/scene_orientation"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|end"
+                            android:paddingEnd="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_details_assist"
+                    style="@style/ListCardItem"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/scene_config_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="沉浸体验" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Switch
+                            android:id="@+id/app_details_hidenav"
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="隐藏导航栏" />
+
+                        <Switch
+                            android:id="@+id/app_details_hidestatus"
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="50dp"
+                            android:layout_weight="1"
+                            android:text="隐藏状态栏" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Switch
+                            android:id="@+id/app_details_hidenotice"
+                            style="@style/scene_config_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="屏蔽通知" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/textSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="屏蔽通知时Scene会自动清除新通知，可能错失消息。按键屏蔽状态下，将使用长按替代短按操作" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ListCardItem">
+                    <TextView
+                        style="@style/scene_config_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Scene功能" />
+
+                    <Switch
+                        android:id="@+id/app_monitor"
+                        style="@style/scene_config_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="性能监视器" />
+
+                    <TextView
+                        style="@style/textSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="显示Scene的迷你性能监视器(OLED设备小心烧屏哦~)" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ListCardItemLast">
+                    <TextView
+                        style="@style/scene_config_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="应用偏见" />
+
+                    <Switch
+                        android:id="@+id/app_details_freeze"
+                        style="@style/scene_config_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自动冻结" />
+
+                    <TextView
+                        style="@style/textSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="锁屏之后，将此应用冻结(禁用)，适用于后台非常耗电但又偶尔需要打开的应用" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+
+    <include
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

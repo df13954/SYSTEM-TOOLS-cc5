@@ -1,0 +1,15 @@
+<resources>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RamInfo">
+        <attr name="total" format="integer" />
+        <attr name="free" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="NavItem">
+        <attr name="text" format="string" />
+        <attr name="layout_res" format="integer" />
+        <attr name="drawable" format="reference|integer" />
+    </declare-styleable>
+</resources>

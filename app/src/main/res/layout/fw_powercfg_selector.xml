@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:theme="@style/AppThemeLight">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:id="@+id/popup_window"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/fw_title"
+                    style="@style/textTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="@string/app_name" />
+
+                <ImageButton
+                    android:id="@+id/fw_float_close"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/close" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#e0e0e0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <GridLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:alignmentMode="alignBounds"
+                    android:paddingHorizontal="3dp">
+
+                    <TextView
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/btn_ignore"
+                        style="@style/textSmallTitle"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="fill"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/powercfg_balance"
+                        android:backgroundTint="?android:colorAccent"
+                        android:text="忽略此应用"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="6dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_marginEnd="6dp"
+                        android:id="@+id/btn_powersave"
+                        style="@style/textTitle"
+                        android:layout_gravity="fill"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/powercfg_powersave"
+                        android:text="@string/powersave_short"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="7dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/btn_defaultmode"
+                        style="@style/textTitle"
+                        android:layout_gravity="fill"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/powercfg_balance"
+                        android:text="@string/balance_short"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="7dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:id="@+id/btn_gamemode"
+                        style="@style/textTitle"
+                        android:layout_gravity="fill"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/powercfg_performance"
+                        android:text="@string/performance_short"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="7dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_marginTop="6dp"
+                        android:id="@+id/btn_fastmode"
+                        style="@style/textTitle"
+                        android:layout_gravity="fill"
+                        android:layout_columnWeight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/powercfg_fast"
+                        android:text="@string/fast_short"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="7dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="12dp" />
+
+                </GridLayout>
+
+                <LinearLayout
+                    android:id="@+id/fw_other_opt"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/fw_app_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="独立亮度"
+                        android:textColor="#888"
+                        android:textSize="12dp" />
+
+                    <CheckBox
+                        android:id="@+id/fw_app_gps"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="GPS定位"
+                        android:textColor="#888"
+                        android:textSize="12dp" />
+
+                    <CheckBox
+                        android:id="@+id/fw_app_dis_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="屏蔽通知"
+                        android:textColor="#888"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#e0e0e0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp">
+
+                <ImageButton
+                    android:id="@+id/fw_float_monitor"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:alpha="0.3"
+                    android:background="@android:color/transparent"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fw_float_monitor" />
+
+                <ImageButton
+                    android:id="@+id/fw_float_task"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:alpha="0.3"
+                    android:background="@android:color/transparent"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dialog_performance" />
+
+                <ImageButton
+                    android:id="@+id/fw_float_monitor_mini"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:alpha="0.3"
+                    android:background="@android:color/transparent"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fw_float_monitor_mini" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <Switch
+                    android:id="@+id/fw_dynamic_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="动态响应 "
+                    android:textColor="#888"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

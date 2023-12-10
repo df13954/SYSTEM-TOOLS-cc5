@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:alpha="0.85"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/confirm_title"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            style="@style/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设定应用cgroup(memory)" />
+        <TextView
+            android:id="@+id/confirm_message"
+            android:visibility="gone"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_default"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_linux"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:padding="11dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:backgroundTint="#FFAB00"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="系统默认" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SWAP使用策略遵循系统全局配置" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_lock"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_default"
+                android:padding="10dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:backgroundTint="#00BFA5"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="普通应用" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="允许积极的将(此应用的)内存交换到SWAP" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_perf"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_perf"
+                android:padding="10dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:backgroundTint="#7CB342"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="优先内存" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="尽量避免将(此应用的)内存交换到SWAP" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_sys"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_mem"
+                android:padding="10dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="重要进程" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="禁止将(此应用的)内存交换到SWAP" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_limit"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_limit"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:padding="4dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:backgroundTint="#40C4FF"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="受限后台" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="限制物理内存使用量，允许积极的将(此应用的)内存交换到SWAP" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/krscript_item_ripple"
+            android:id="@+id/cgroup_limit2"
+            style="@style/ListCardItemSmall"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/memory_recycle"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:padding="10dp"
+                android:background="@drawable/action_menu_icon_bg"
+                android:backgroundTint="#959595"
+                app:tint="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitle"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="回收内存" />
+
+                <TextView
+                    style="@style/textSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="只允许占用极少的物理内存，允许积极的将(此应用的)内存交换到SWAP" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.omarea.common.ui.OverScrollView>

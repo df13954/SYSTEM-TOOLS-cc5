@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_app_bar"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/tab_freeze_apps"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:background="@drawable/list_view_bg"
+            android:id="@+id/freeze_apps_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="搜索应用名"
+            android:inputType="textFilter"
+            android:maxLength="10"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            android:textSize="16dp" />
+
+        <com.omarea.common.ui.OverScrollGridView
+            android:layout_marginTop="10dp"
+            android:background="@drawable/list_view_bg"
+            android:layout_below="@id/freeze_apps_search"
+            android:id="@+id/freeze_apps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4" />
+
+        <ImageButton
+            android:id="@+id/freeze_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            style="?android:buttonBarButtonStyle"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginVertical="12dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/kr_list"
+            android:tint="?android:colorAccent" />
+    </RelativeLayout>
+</RelativeLayout>
