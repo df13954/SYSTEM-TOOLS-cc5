@@ -436,7 +436,7 @@ class FragmentHome : androidx.fragment.app.Fragment() {
                         Toast.makeText(activity,  getString(R.string.home_core_required), Toast.LENGTH_SHORT).show()
                     }
                 }
-            }, true)
+            } )
             .setTitle(getString(R.string.home_core_switch))
             .show(activity.supportFragmentManager, "home-cpu-control")
         }

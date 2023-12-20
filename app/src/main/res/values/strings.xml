@@ -1,5 +1,6 @@
 <resources>
     <string name="require_restart_app">需要重启应用才能生效</string>
+    <string name="help_title">help_title</string>
 
     <integer name="opacity">0</integer>
 

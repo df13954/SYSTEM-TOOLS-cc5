@@ -84,11 +84,11 @@ class ActivityModules : ActivityBase(), AdapterModules.OnItemClickListener {
         val module = modules.getItem(position)
         // https://github.com/Magisk-Modules-Repo/mtd-ndk/archive/refs/heads/master.zip
         val moduleName = module.substring(0, module.indexOf("/"))
-        Downloader(context, this).downloadBySystem(
-                "https://github.com/${module}/archive/refs/heads/master.zip",
-                moduleName,
-                "application/zip",
-                "",
-        moduleName + ".zip")
+        // Downloader(context, this).downloadBySystem(
+        //         "https://github.com/${module}/archive/refs/heads/master.zip",
+        //         moduleName,
+        //         "application/zip",
+        //         "",
+        // moduleName + ".zip")
     }
 }

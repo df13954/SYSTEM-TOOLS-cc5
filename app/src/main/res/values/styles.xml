@@ -1,4 +1,9 @@
 <resources>
+
+    <style name="textXSmall">
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="SceneTabLayout">
         <item name="android:background">?cardBg</item>
         <item name="tabIndicator">@null</item>
